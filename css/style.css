@@ -1,0 +1,19 @@
+* {
+	margin: 0 auto;
+}
+
+.slider {
+	width: 80%;
+	height: 80%;
+	position: relative;
+	overflow: hidden;
+	min-height: 405px;
+}
+
+body {
+	height: 100vh;
+	background: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

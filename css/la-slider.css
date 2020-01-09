@@ -1,0 +1,99 @@
+.la-slider {
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.la-slide {
+	min-height: 100%;
+	min-width: 100%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.la-slider .content {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	transition-duration: 500ms;
+	transition-property: transform;
+}
+
+.la-content {
+	display: flex;
+}
+
+.hide {
+	display: none;
+}
+
+.arrow-left, .arrow-right {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;
+	user-select: none;
+	cursor: pointer;
+	transition: 0.5s opacity;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+	opacity: 0.8;
+}
+
+.arrow-left {left: 5px}
+.arrow-right {right: 5px}
+
+.circle-block {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 1.5px solid #000;
+	background: #fff;
+	cursor: pointer;
+	transition-duration: 300ms;
+	transition-property: transform;
+}
+
+.circle:hover {
+	transform: scale(1.1);
+}
+
+.circle:not(:last-child) {
+	margin-right: 5px;
+}
+
+.fade {
+	animation: fade;
+}
+
+.active-circle {
+	background: #000;
+	transform: scale(1.1);
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
